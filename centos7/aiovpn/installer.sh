@@ -21,6 +21,9 @@
 ## Set Timezone to Asia/Manila
 ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
 
+## Disable SeLinux
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/default/stunnel4
+
 ## Install Resiquites
 yum install wget curl nano -y
 
